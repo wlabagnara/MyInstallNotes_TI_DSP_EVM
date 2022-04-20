@@ -1,0 +1,35 @@
+
+**** Clean-only build of configuration Debug for project led_play ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 8 clean -O 
+ 
+DEL /F  "led_play.hex"  "led_play.out" 
+DEL /F "led_play.obj" "main.obj" 
+DEL /F "led_play.d" "main.d" 
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project led_play ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/bin/cl6x" -mv6600 --include_path="C:/Users/wlaba/workspace_v9_myexamples/led_play" --include_path="C:/ti/pdk_C6678_1_1_2_5/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../led_play.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/bin/cl6x" -mv6600 --include_path="C:/Users/wlaba/workspace_v9_myexamples/led_play" --include_path="C:/ti/pdk_C6678_1_1_2_5/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="led_play.d_raw"  "../led_play.c"
+Finished building: "../led_play.c"
+ 
+Building target: "led_play.out"
+Invoking: C6000 Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/bin/cl6x" -mv6600 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"led_play.map" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/lib" -i"C:/ti/pdk_C6678_1_1_2_5/packages/ti/platform/evmc6678l/platform_lib/lib/debug" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="led_play_linkInfo.xml" --rom_model -o "led_play.out" "./led_play.obj" "./main.obj" "../led_play.cmd"  -llibc.a -lti.platform.evm6678l.ae66 
+<Linking>
+Finished building target: "led_play.out"
+ 
+
+**** Build Finished ****
