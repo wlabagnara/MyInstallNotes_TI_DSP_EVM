@@ -69,7 +69,7 @@ void main(void) {
 /* Play forever */
  while(1) {
  platform_led(led_no, PLATFORM_LED_ON, PLATFORM_USER_LED_CLASS);
- platform_delay(30000);
+ platform_delay(1000000);
  platform_led(led_no, PLATFORM_LED_OFF, PLATFORM_USER_LED_CLASS);
  led_no = (++led_no) % p_info.led[PLATFORM_USER_LED_CLASS].count;
  }
