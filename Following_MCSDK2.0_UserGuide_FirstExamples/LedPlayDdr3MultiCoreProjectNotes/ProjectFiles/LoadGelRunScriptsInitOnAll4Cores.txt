@@ -1,0 +1,70 @@
+C66xx_0: GEL Output: Setup_Memory_Map...
+C66xx_0: GEL Output: Setup_Memory_Map... Done.
+C66xx_0: GEL Output: C6678L GEL file Ver is 2.00500011 
+C66xx_0: GEL Output: Global Default Setup...
+C66xx_0: GEL Output: Setup Cache... 
+C66xx_0: GEL Output: L1P = 32K   
+C66xx_0: GEL Output: L1D = 32K   
+C66xx_0: GEL Output: L2 = ALL SRAM   
+C66xx_0: GEL Output: Setup Cache... Done.
+C66xx_0: GEL Output: Main PLL (PLL1) Setup ... 
+C66xx_0: GEL Output: PLL not in Bypass, Enable BYPASS in the PLL Controller... 
+C66xx_0: GEL Output: PLL1 Setup for DSP @ 1000.0 MHz.
+C66xx_0: GEL Output:            SYSCLK2 = 333.333344 MHz, SYSCLK5 = 200.0 MHz.
+C66xx_0: GEL Output:            SYSCLK8 = 15.625 MHz.
+C66xx_0: GEL Output: PLL1 Setup... Done.
+C66xx_0: GEL Output: Power on all PSC modules and DSP domains... 
+C66xx_0: GEL Output: Power on all PSC modules and DSP domains... Done.
+C66xx_0: GEL Output: PA PLL (PLL3) Setup ... 
+C66xx_0: GEL Output: PA PLL Setup... Done.
+C66xx_0: GEL Output: DDR3 PLL (PLL2) Setup ... 
+C66xx_0: GEL Output: DDR3 PLL Setup... Done.
+C66xx_0: GEL Output: DDR begin (1333 auto)
+C66xx_0: GEL Output: XMC Setup ... Done 
+C66xx_0: GEL Output: 
+DDR3 initialization is complete.
+C66xx_0: GEL Output: DDR done
+C66xx_0: GEL Output: DDR3 memory test... Started
+C66xx_0: GEL Output: DDR3 memory test... Passed
+C66xx_0: GEL Output: PLL and DDR Initialization completed(0) ...
+C66xx_0: GEL Output: configSGMIISerdes Setup... Begin
+C66xx_0: GEL Output: 
+SGMII SERDES has been configured.
+C66xx_0: GEL Output: Enabling EDC ...
+C66xx_0: GEL Output: L1P error detection logic is enabled.
+C66xx_0: GEL Output: L2 error detection/correction logic is enabled.
+C66xx_0: GEL Output: MSMC error detection/correction logic is enabled.
+C66xx_0: GEL Output: Enabling EDC ...Done 
+C66xx_0: GEL Output: Configuring CPSW ...
+C66xx_0: GEL Output: Configuring CPSW ...Done 
+C66xx_0: GEL Output: Global Default Setup... Done.
+C66xx_1: GEL Output: Setup_Memory_Map...
+C66xx_1: GEL Output: Setup_Memory_Map... Done.
+C66xx_1: GEL Output: C6678L GEL file Ver is 2.00500011 
+C66xx_1: GEL Output: Global Default Setup...
+C66xx_1: GEL Output: Setup Cache... 
+C66xx_1: GEL Output: L1P = 32K   
+C66xx_1: GEL Output: L1D = 32K   
+C66xx_1: GEL Output: L2 = ALL SRAM   
+C66xx_1: GEL Output: Setup Cache... Done.
+C66xx_1: GEL Output: Global Default Setup... Done.
+C66xx_2: GEL Output: Setup_Memory_Map...
+C66xx_2: GEL Output: Setup_Memory_Map... Done.
+C66xx_2: GEL Output: C6678L GEL file Ver is 2.00500011 
+C66xx_2: GEL Output: Global Default Setup...
+C66xx_2: GEL Output: Setup Cache... 
+C66xx_2: GEL Output: L1P = 32K   
+C66xx_2: GEL Output: L1D = 32K   
+C66xx_2: GEL Output: L2 = ALL SRAM   
+C66xx_2: GEL Output: Setup Cache... Done.
+C66xx_2: GEL Output: Global Default Setup... Done.
+C66xx_3: GEL Output: Setup_Memory_Map...
+C66xx_3: GEL Output: Setup_Memory_Map... Done.
+C66xx_3: GEL Output: C6678L GEL file Ver is 2.00500011 
+C66xx_3: GEL Output: Global Default Setup...
+C66xx_3: GEL Output: Setup Cache... 
+C66xx_3: GEL Output: L1P = 32K   
+C66xx_3: GEL Output: L1D = 32K   
+C66xx_3: GEL Output: L2 = ALL SRAM   
+C66xx_3: GEL Output: Setup Cache... Done.
+C66xx_3: GEL Output: Global Default Setup... Done.

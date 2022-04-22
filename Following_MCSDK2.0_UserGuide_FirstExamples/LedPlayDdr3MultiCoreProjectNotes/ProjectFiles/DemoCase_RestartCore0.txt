@@ -1,0 +1,31 @@
+
+Actual prints on IDE Console panel...
+(core prints as they 'pass' the semaphore)...
+
+[C66xx_3] Start BIOS 6
+[C66xx_2] Start BIOS 6
+[C66xx_1] Start BIOS 6
+[C66xx_0] Start BIOS 6
+core = 0 starts twinkling its LED
+[C66xx_1] core = 1 starts twinkling its LED
+[C66xx_0] core 0 is done.
+[C66xx_1] core 1 is done.
+[C66xx_2] core = 2 starts twinkling its LED
+[C66xx_3] core = 3 starts twinkling its LED
+[C66xx_2] core 2 is done.
+[C66xx_3] core 3 is done.
+
+NOTES:
+
+1. To each core, starting with Core0
+  Connected
+  Loaded 'evmc6678l.gel'
+  Did 'Scripts->Init Functions->Global_Default_Setup'
+  Loaded 'led_play_ddr3_mc.out' build image
+  
+2. Ran each core starting with Core0 and ending with Core3
+3. Set no breakpoints
+4. After a little wait, I did a restart on Core0
+5. After a short delay I would witness the next core 'start twinkling its LED'
+	and the current core#'s 'core# is done.'
+	
