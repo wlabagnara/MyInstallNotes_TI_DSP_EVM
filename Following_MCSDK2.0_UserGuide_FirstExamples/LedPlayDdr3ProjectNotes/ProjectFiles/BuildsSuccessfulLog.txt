@@ -1,0 +1,31 @@
+
+
+**** Build of configuration Debug for project led_play_ddr3 ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../led_play_ddr3.cfg"
+Invoking: XDCtools
+"C:/ti/xdctools_3_23_04_60/xs" --xdcpath="C:/ti/mcsdk_2_01_02_05/demos;C:/ti/pdk_C6678_1_1_2_5/packages;C:/ti/bios_6_33_06_50/packages;" xdc.tools.configuro -o configPkg -t ti.targets.elf.C66 -p ti.platforms.evm6678 -r debug -c "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12" "../led_play_ddr3.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring led_play_ddr3.xe66 from package/cfg/led_play_ddr3_pe66.cfg ...
+cle66 package/cfg/led_play_ddr3_pe66.c ...
+"package/cfg/led_play_ddr3_pe66.c", line 14102: warning: statement is unreachable
+"package/cfg/led_play_ddr3_pe66.c", line 14282: warning: statement is unreachable
+"package/cfg/led_play_ddr3_pe66.c", line 14423: warning: statement is unreachable
+Finished building: "../led_play_ddr3.cfg"
+ 
+Building file: "../main.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/bin/cl6x" -mv6600 --include_path="C:/Users/wlaba/workspace_v9_myexamples/led_play_ddr3" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw" --cmd_file="configPkg/compiler.opt" "../main.c"
+Finished building: "../main.c"
+ 
+Building target: "led_play_ddr3.out"
+Invoking: C6000 Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/bin/cl6x" -mv6600 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"led_play_ddr3.map" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/lib" -i"C:/ti/pdk_C6678_1_1_2_5/packages/ti/platform/evmc6678l/platform_lib/lib/debug" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.12/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="led_play_ddr3_linkInfo.xml" --rom_model -o "led_play_ddr3.out" "./main.obj" -l"configPkg/linker.cmd" -lti.platform.evm6678l.ae66 -llibc.a 
+<Linking>
+Finished building target: "led_play_ddr3.out"
+ 
+
+**** Build Finished ****
