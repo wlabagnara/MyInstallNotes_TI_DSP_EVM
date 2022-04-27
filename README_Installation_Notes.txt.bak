@@ -43,7 +43,7 @@ As of 4/20/2022 - Installing CCSv9.3
 
 6. Install ti_emupack_5.0.838.0 (can be installed 'on top of' CCS baseline release)  --> ~\ti\ccs<version>\ccs_base\
 	a. ~\ti\ccsv5\ccs_base\ was for CCSv5
-	b. ~\ti\ccs930\ccs\ccs_base is the way it was for CCSv9.30 (and CCSv11.20)
+	b. ~\ti\ccs930\ccs\ccs_base is the way it was for CCSv9.30 and CCSv11.20
 
 7. Install ti_emupack_keystone1_1.0.6.0 (can be installed 'on top of' CCS baseline release) --> ~\ti\ccs<version>\ccs_base\
 
