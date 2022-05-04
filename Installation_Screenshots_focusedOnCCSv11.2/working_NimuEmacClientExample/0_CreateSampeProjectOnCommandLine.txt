@@ -1,0 +1,82 @@
+Microsoft Windows [Version 10.0.22000.613]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\ti\pdk_c667x_2_0_16\packages>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is F0BB-F72B
+
+ Directory of C:\ti\pdk_c667x_2_0_16\packages
+
+03/27/2022  09:38 PM    <DIR>          .
+03/25/2022  09:14 AM    <DIR>          ..
+04/20/2020  02:31 PM             3,601 API_Documentation.html
+04/20/2020  02:28 PM             1,056 macros.ini
+04/20/2020  02:28 PM             7,685 makefile
+03/28/2022  02:26 PM    <DIR>          MyExampleProjects
+04/20/2020  02:28 PM             3,875 pdkAppImageCreate.bat
+04/20/2020  02:28 PM             4,522 pdkAppImageCreate.sh
+04/20/2020  02:28 PM            32,485 pdkProjectCreate.bat
+04/20/2020  02:28 PM            34,751 pdkProjectCreate.sh
+04/20/2020  02:28 PM             3,662 pdksetupenv.bat
+04/20/2020  02:28 PM             3,309 pdksetupenv.sh
+03/25/2022  09:14 AM    <DIR>          ti
+               9 File(s)         94,946 bytes
+               4 Dir(s)  896,690,061,312 bytes free
+
+C:\ti\pdk_c667x_2_0_16\packages>pdksetupenv.bat
+***************************************************
+Environment Configuration:
+***************************************************
+    SDK_INSTALL_PATH        : C:/ti
+    PDK_INSTALL_PATH        : C:/ti/pdk_c667x_2_0_16/packages
+    GMAKE_INSTALL_PATH      : C:/ti/xdctools_3_55_02_22_core
+    PDK_SOC                 : c667x
+    PDK_VERSION             : 2_0_16
+    RULES_MAKE              : C:/ti/pdk_c667x_2_0_16/packages/ti/build/Rules.make
+***************************************************
+
+C:\ti\pdk_c667x_2_0_16\packages>pdkProjectCreate.bat C6678 all little nimu all dsp "C:\ti\pdk_c667x_2_0_16\packages"
+=========================================================================
+Configuration:
+   SOC             :   C6678
+   BOARD           :   all
+   ENDIAN          :   little
+   MODULE          :   nimu
+   PROJECT_TYPE    :   all
+   PROCESSOR       :   dsp
+   PDK_SHORT_NAME  :   "C:\ti\pdk_c667x_2_0_16\packages"
+=========================================================================
+Checking Configuration...
+Complete
+=========================================================================
+   PDK_PARTNO         : C6678L
+   PDK_ECLIPSE_ID     : com.ti.pdk.c667x
+   RTSC_PLATFORM_NAME : ti.platforms.evm6678
+   RTSC_TARGET        : ti.targets.elf.C66
+   CCS_DEVICE         : "com.ti.ccstudio.deviceModel.C6000.GenericC64xPlusDevice"
+*****************************************************************************
+Detecting all projects in PDK and importing them in the workspace "C:\ti\pdk_c667x_2_0_16\packages"\MyExampleProjects
+Detected Test Project: NIMU_emacClientExample_EVMC6678C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'NIMU_emacClientExample_EVMC6678C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: NIMU_emacExample_EVMC6678C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'NIMU_emacExample_EVMC6678C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Project generation complete
+*****************************************************************************
+
+C:\ti\pdk_c667x_2_0_16\packages>
