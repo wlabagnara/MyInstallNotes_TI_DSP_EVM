@@ -1,0 +1,646 @@
+
+****************************** NOTE ************************************
+* The first time I performed these steps, the process did NOT work.    *
+* See file "Generate_CCS_PDK_C6678_Examples_DidNotWorkCorrectly.txt"   *
+* It seems I had to launch CCS first and it detected the packages      *
+*  and prompted for 'installation'.                                    *
+* See file "CCS_1_FirstLaunch_NewInstallableProductsDiscovered.png"    *
+* So, I think that immediately after installing the SDK and then CCS,  *
+*  I should have LAUNCHED CCS to let it "detect/finish" the            *
+*  SDK install process. Then, I think these steps would have worked    *
+*  correctly the very first time. 
+* This seems supported by documentation at the following link: 
+*   https://software-dl.ti.com/processor-sdk-rtos/esd/docs/06_03_00_106/rtos/index_examples_demos.html#task-1-installing-the-processor-sdk-into-ccs
+************************************************************************
+
+Microsoft Windows [Version 10.0.22000.556]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\ti\pdk_c667x_2_0_16\packages>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is F0BB-F72B
+
+ Directory of C:\ti\pdk_c667x_2_0_16\packages
+
+03/27/2022  09:38 PM    <DIR>          .
+03/25/2022  09:14 AM    <DIR>          ..
+04/20/2020  02:31 PM             3,601 API_Documentation.html
+04/20/2020  02:28 PM             1,056 macros.ini
+04/20/2020  02:28 PM             7,685 makefile
+03/27/2022  09:38 PM    <DIR>          MyExampleProjects
+04/20/2020  02:28 PM             3,875 pdkAppImageCreate.bat
+04/20/2020  02:28 PM             4,522 pdkAppImageCreate.sh
+04/20/2020  02:28 PM            32,485 pdkProjectCreate.bat
+04/20/2020  02:28 PM            34,751 pdkProjectCreate.sh
+04/20/2020  02:28 PM             3,662 pdksetupenv.bat
+04/20/2020  02:28 PM             3,309 pdksetupenv.sh
+03/25/2022  09:14 AM    <DIR>          ti
+               9 File(s)         94,946 bytes
+               4 Dir(s)  910,795,046,912 bytes free
+
+STEP 1 ==> C:\ti\pdk_c667x_2_0_16\packages>pdksetupenv.bat                     
+
+***************************************************
+Environment Configuration:
+***************************************************
+    SDK_INSTALL_PATH        : C:/ti
+    PDK_INSTALL_PATH        : C:/ti/pdk_c667x_2_0_16/packages
+    GMAKE_INSTALL_PATH      : C:/ti/xdctools_3_55_02_22_core
+    PDK_SOC                 : c667x
+    PDK_VERSION             : 2_0_16
+    RULES_MAKE              : C:/ti/pdk_c667x_2_0_16/packages/ti/build/Rules.make
+***************************************************
+
+STEP 2 ==> C:\ti\pdk_c667x_2_0_16\packages>pdkProjectCreate.bat C6678 all little all all dsp "C:\ti\pdk_c667x_2_0_16\packages"
+
+=========================================================================
+Configuration:
+   SOC             :   C6678
+   BOARD           :   all
+   ENDIAN          :   little
+   MODULE          :   all
+   PROJECT_TYPE    :   all
+   PROCESSOR       :   dsp
+   PDK_SHORT_NAME  :   "C:\ti\pdk_c667x_2_0_16\packages"
+=========================================================================
+Checking Configuration...
+Complete
+=========================================================================
+   PDK_PARTNO         : C6678L
+   PDK_ECLIPSE_ID     : com.ti.pdk.c667x
+   RTSC_PLATFORM_NAME : ti.platforms.evm6678
+   RTSC_TARGET        : ti.targets.elf.C66
+   CCS_DEVICE         : "com.ti.ccstudio.deviceModel.C6000.GenericC64xPlusDevice"
+*****************************************************************************
+Detecting all projects in PDK and importing them in the workspace "C:\ti\pdk_c667x_2_0_16\packages"\MyExampleProjects
+Detected Test Project: cppi_evmc6678_c66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'cppi_evmc6678_c66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: cppi_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'cppi_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: GPIO_LedBlink_C6678_EVM_c66xTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'GPIO_LedBlink_C6678_EVM_c66xTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: hyplnk_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'hyplnk_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: hyplnk_evmc6678_C66DevLibBiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'hyplnk_evmc6678_C66DevLibBiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: I2C_BasicExample_C6678H_Evm_c66xExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'I2C_BasicExample_C6678H_Evm_c66xExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: I2C_BasicExample_C6678_Evm_c66xTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'I2C_BasicExample_C6678_Evm_c66xTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: nwalUnitTestC6678_C66TestProject
+
+--------------------------------------------------------------------------------
+Creating project 'nwalUnitTestC6678_C66TestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: nwalUnitTestSaC6678_C66TestProject
+
+--------------------------------------------------------------------------------
+Creating project 'nwalUnitTestSaC6678_C66TestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: PA_emacExample_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'PA_emacExample_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: PA_multicoreExample_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'PA_multicoreExample_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: PA_UnitTest_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'PA_UnitTest_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: PCIE_evmc6678_wSoCFile_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'PCIE_evmc6678_wSoCFile_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: PCIE_evmc6678_wSoCLib_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'PCIE_evmc6678_wSoCLib_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmInfraMC_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmInfraMC_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmInfra_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmInfra_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmAcc_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmAcc_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmDCfg_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmDCfg_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmDesc_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmDesc_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmInsRegion_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmInsRegion_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQAlloc_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQAlloc_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosFwCModel_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosFwCModel_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosSchedCModel_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosSchedCModel_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosSchedDropSched_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosSchedDropSched_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosSchedWide_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosSchedWide_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosSched_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosSched_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmQosTest_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmQosTest_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmSCfg_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmSCfg_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmSrioContext_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmSrioContext_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: qmSrioRtr_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'qmSrioRtr_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: rmShared_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'rmShared_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: rm_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'rm_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: rm_evmc6678_C66DspMtBiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'rm_evmc6678_C66DspMtBiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_BasicExample_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_BasicExample_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_BasicExample_w3gpp_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_BasicExample_w3gpp_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_MultiCoreExample_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_MultiCoreExample_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_MultiCoreExample_w3gpp_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_MultiCoreExample_w3gpp_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_UnitTest_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_UnitTest_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SA_UnitTest_w3gpp_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'SA_UnitTest_w3gpp_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SPI_BasicExample_C6678_c66xExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SPI_BasicExample_C6678_c66xExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SPI_BasicExample_C6678_c66xTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'SPI_BasicExample_C6678_c66xTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SRIO_LpbkDioIsr_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SRIO_LpbkDioIsr_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SRIO_MulticoreLpbk_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'SRIO_MulticoreLpbk_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SRIO_Loopback_evmc6678_C66BiosTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'SRIO_Loopback_evmc6678_C66BiosTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: SRIO_TputBenchmarking_evmc6678_C66TestProject
+
+--------------------------------------------------------------------------------
+Creating project 'SRIO_TputBenchmarking_evmc6678_C66TestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: TSIP_evmc6678_c66exampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'TSIP_evmc6678_c66exampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: TSIP_evmc6678_c66testProject
+
+--------------------------------------------------------------------------------
+Creating project 'TSIP_evmc6678_c66testProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: UART_BasicExample_C6678_c66xExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'UART_BasicExample_C6678_c66xExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: UART_BasicExample_C6678_c66xDMATestProject
+
+--------------------------------------------------------------------------------
+Creating project 'UART_BasicExample_C6678_c66xDMATestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: UART_BasicExample_C6678_c66xTestProject
+
+--------------------------------------------------------------------------------
+Creating project 'UART_BasicExample_C6678_c66xTestProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: transportQmssBenchmarkC6678C66ExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'transportQmssBenchmarkC6678C66ExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: transportSrioBenchmarkC6678C66ExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'transportSrioBenchmarkC6678C66ExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: transportSrioMultiBoardConsumerC6678C66ExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'transportSrioMultiBoardConsumerC6678C66ExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: transportSrioMultiBoardProducerC6678C66ExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'transportSrioMultiBoardProducerC6678C66ExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: NIMU_emacClientExample_EVMC6678C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'NIMU_emacClientExample_EVMC6678C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: NIMU_emacExample_EVMC6678C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'NIMU_emacExample_EVMC6678C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Project generation complete
+*****************************************************************************
+
+
+STEP 3 ==> Navigate to "C:\ti\pdk_c667x_2_0_16\packages\MyExampleProjects" to view package examples.
+
+  Compare to file "Generate_CCS_PDK_C6678_Examples_WorkedCorrectly_FolderOutput.png"
+
+STEP 4 ==> Launch CCS and can 'import' an example project and then build and debug it!
+
+  Exporting an existing example project is shown in file "Generate_CCS_PDK_C6678_Examples_WorkedCorrectly_ImportExample.png"

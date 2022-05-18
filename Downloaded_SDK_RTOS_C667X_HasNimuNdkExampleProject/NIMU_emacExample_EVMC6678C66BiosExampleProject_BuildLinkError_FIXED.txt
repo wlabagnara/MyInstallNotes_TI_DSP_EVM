@@ -1,0 +1,91 @@
+
+**************************************** NOTE ***************************************
+* Needed to modify project file 'helloWorld.c'                              
+*   It seems 'System_flush' was already defined in SDK (xdctools) runtime\System.h
+*   I renamed 'System_flush()' to 'System_flush_local()' where defined/used in helloWorld.c
+* See file 'NIMU_emacExample_EVMC6678C66BiosExampleProject_BuildLinkError.txt' to see the
+*   build/link error before the fix was added (search for 'error #'). 
+* The remainder of this file shows the build/link now working after the fix was added.
+*************************************************************************************
+
+
+**** Build of configuration Debug for project NIMU_emacExample_EVMC6678C66BiosExampleProject ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/c6678/c66/bios/helloWorld.cfg"
+Invoking: XDCtools
+"C:/ti/xdctools_3_55_02_22_core/xs" --xdcpath="C:/ti/bios_6_76_03_01/packages;C:/ti/pdk_c667x_2_0_16/packages;C:/ti/edma3_lld_2_12_05_30E/packages;C:/ti/ipc_3_50_04_08/packages;C:/ti/ndk_3_61_01_01/packages;C:/ti/uia_2_30_01_02/packages;C:/ti/bios_6_76_03_01/packages/ti/posix/ccs;" xdc.tools.configuro -o configPkg -t ti.targets.elf.C66 -p ti.platforms.evm6678 -r debug -c "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/c6678/c66/bios/helloWorld.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring helloWorld.xe66 from package/cfg/helloWorld_pe66.cfg ...
+generating custom ti.sysbios library makefile ... 
+	Linking with library ti.transport.ndk.nimu:./lib/c6678/c66/release/ti.transport.ndk.nimu.ae66
+	Linking with library ti.osal:./lib/tirtos/c66/release/ti.osal.ae66
+	Linking with library ti.drv.pa:./lib/c66/ti.drv.pa.ae66
+	Linking with library ti.drv.qmss:./lib/c66/ti.drv.qmss.ae66
+	Linking with library ti.drv.rm:./lib/c66/ti.drv.rm.ae66
+	Linking with library ti.drv.cppi:./lib/c66/ti.drv.cppi.ae66
+	Linking with library ti.csl:./lib/c6678/c66/release/ti.csl.ae66;./lib/c6678/c66/release/ti.csl.intc.ae66
+Starting build of library sources ...
+making C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/c6678/c66/bios/src/sysbios/sysbios.ae66 ...
+Build of libraries done.
+cle66 package/cfg/helloWorld_pe66.c ...
+"package/cfg/helloWorld_pe66.c", line 3276: warning: variable "rc" was declared but never referenced
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/c6678/c66/bios/helloWorld.cfg"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/global-resource-list.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="global-resource-list.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/global-resource-list.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/global-resource-list.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/policy_dsp-only.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="policy_dsp-only.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/policy_dsp-only.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/drv/rm/device/c6678/policy_dsp-only.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/setuprm.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="setuprm.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/setuprm.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/setuprm.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/udpHello.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="udpHello.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/udpHello.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/udpHello.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_pa_iface.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="nimu_pa_iface.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_pa_iface.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_pa_iface.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="helloWorld.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c"
+"C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c", line 312: warning #225-D: function "bzero" declared implicitly
+"C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c", line 347: warning #225-D: function "bzero" declared implicitly
+"C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c", line 138: warning #179-D: variable "i" was declared but never referenced
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/helloWorld.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_cppi_qmss_iface.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="nimu_cppi_qmss_iface.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_cppi_qmss_iface.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_cppi_qmss_iface.c"
+ 
+Building file: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_osal.c"
+Invoking: C6000 Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --include_path="C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject" --include_path="C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu" --include_path="C:/ti/pdk_c667x_2_0_16/packages" --include_path="{NDK_INSTALL_DIR}/packages" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="nimu_osal.d_raw" --cmd_file="configPkg/compiler.opt" "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_osal.c"
+Finished building: "C:/ti/pdk_c667x_2_0_16/packages/ti/transport/ndk/nimu/example/helloWorld/src/nimu_osal.c"
+ 
+Building target: "NIMU_emacExample_EVMC6678C66BiosExampleProject.out"
+Invoking: C6000 Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/bin/cl6x" -mv64+ --define=USE_BIOS --define=SOC_C6678 --define=DEVICE_C6678 -g --diag_suppress=1111 --diag_suppress=827 --diag_suppress=824 --diag_suppress=837 --diag_suppress=1037 --diag_suppress=195 --diag_suppress=77 --diag_suppress=232 --diag_warning=225 --diag_warning=994 --diag_warning=262 --diag_wrap=off --display_error_number -z -m"NIMU_emacExample_EVMC6678C66BiosExampleProject.map" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="NIMU_emacExample_EVMC6678C66BiosExampleProject_linkInfo.xml" --rom_model -o "NIMU_emacExample_EVMC6678C66BiosExampleProject.out" "./global-resource-list.obj" "./helloWorld.obj" "./nimu_cppi_qmss_iface.obj" "./nimu_osal.obj" "./nimu_pa_iface.obj" "./policy_dsp-only.obj" "./setuprm.obj" "./udpHello.obj" -l"configPkg/linker.cmd" -llibc.a 
+<Linking>
+warning #10247-D: creating output section ".sharedGRL" without a SECTIONS specification
+warning #10247-D: creating output section ".sharedPolicy" without a SECTIONS specification
+Finished building target: "NIMU_emacExample_EVMC6678C66BiosExampleProject.out"
+ 
+C:/ti/pdk_c667x_2_0_16/packages/pdkAppImageCreate.bat C:/ti/pdk_c667x_2_0_16/packages C:/ti/ccs930/ccs/tools/compiler/ti-cgt-c6000_8.3.5 C:/ti/pdk_c667x_2_0_16/packages/MyExampleProjects/NIMU_emacExample_EVMC6678C66BiosExampleProject/Debug NIMU_emacExample_EVMC6678C66BiosExampleProject C6678 dsp
+ 
+
+**** Build Finished ****
