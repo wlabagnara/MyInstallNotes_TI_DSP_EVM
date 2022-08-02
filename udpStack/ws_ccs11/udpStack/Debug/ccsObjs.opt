@@ -1,0 +1,1 @@
+"./global-resource-list.obj" "./nimu_cppi_qmss_iface.obj" "./nimu_osal.obj" "./nimu_pa_iface.obj" "./policy_dsp-only.obj" "./setuprm.obj" "./src2/helloWorld.obj" "./src2/udpHello.obj" -l"configPkg/linker.cmd" -llibc.a 
