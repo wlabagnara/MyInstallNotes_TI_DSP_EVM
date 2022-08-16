@@ -1,6 +1,6 @@
 *** DEBUG SERVER SCRIPTING ***
 
-Used by TI to program EVM/Target boards...
+Used by TI to program EVM/Target boards... Javascript via RHINO
 
 References:	https://youtu.be/9mZr5WcqPz8
 			https://software-dl.ti.com/ccs/esd/documents/users_guide/sdto_dss_handbook.html
