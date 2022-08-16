@@ -1,0 +1,113 @@
+*** DEBUG SERVER SCRIPTING ***
+
+Used by TI to program EVM/Target boards...
+
+References:	https://youtu.be/9mZr5WcqPz8
+			https://software-dl.ti.com/ccs/esd/documents/users_guide/sdto_dss_handbook.html
+			file:///C:/ti/ccs1120/ccs/ccs_base/scripting/docs/GettingStarted.htm  (on your PC, after CCSv11.2 installed)
+
+## NOTE: Needed files under 'program_evm' folder from DVD that came with C6678 EVM board!
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is F0BB-F72B
+
+ Directory of C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm
+
+08/16/2022  03:50 PM    <DIR>          .
+08/16/2022  03:50 PM    <DIR>          ..
+08/16/2022  03:50 PM    <DIR>          binaries
+08/16/2022  03:50 PM    <DIR>          configs
+08/16/2022  03:50 PM    <DIR>          gel
+08/16/2022  03:50 PM    <DIR>          logs
+11/05/2012  03:43 PM            14,354 program_evm.js
+11/05/2012  03:43 PM           471,545 program_evm_userguide.pdf
+               2 File(s)        485,899 bytes
+               6 Dir(s)  871,853,047,808 bytes free
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>cd binaries
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm\binaries>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is F0BB-F72B
+
+ Directory of C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm\binaries
+
+08/16/2022  03:50 PM    <DIR>          .
+08/16/2022  03:50 PM    <DIR>          ..
+08/16/2022  03:50 PM    <DIR>          evm6657l
+08/16/2022  03:50 PM    <DIR>          evm6670l
+08/16/2022  03:50 PM    <DIR>          evm6678l
+               0 File(s)              0 bytes
+               5 Dir(s)  871,852,965,888 bytes free
+
+## Set windows environment variables...
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>set DSS_SCRIPT_DIR="C:\ti\ccs1120\ccs\ccs_base\scripting\bin"
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>set PROGRAM_EVM_TARGET_CONFIG_FILE=C:\Users\wlaba\workspace_v11\led_play_ddr3_mc\targetConfigs\TMS320C6678.ccxml
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>echo %DSS_SCRIPT_DIR%
+	"C:\ti\ccs1120\ccs\ccs_base\scripting\bin"
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>echo %PROGRAM_EVM_TARGET_CONFIG_FILE%
+	C:\Users\wlaba\workspace_v11\led_play_ddr3_mc\targetConfigs\TMS320C6678.ccxml
+
+## Run with no EVM connected ...
+
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>%DSS_SCRIPT_DIR%\dss.bat program_evm.js TMDXEVM6678Le-le
+board: evm6678l
+endian: Little
+emulation: XDS560 mezzanine
+binaries: C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm/binaries/evm6678l/
+ccxml: C:\Users\wlaba\workspace_v11\led_play_ddr3_mc\targetConfigs\TMS320C6678.ccxml
+E_RPCENV_IO_ERROR(-6) No connection: emulator was not found
+Download failed for file C:\ti\ccs1120\ccs\ccs_base\common\uscif\xds560v2.out
+SEVERE: IcePick_D: Error initializing emulator: (Error -2083 @ 0x0)
+Unable to communicate with the debug probe. Confirm debug probe configuration and connections, reset the debug probe, and retry the operation.
+(Emulation package 9.7.0.00213)
+
+SEVERE: Could not start server: DebugServer.1: IcePick_D: Error initializing emulator: (Error -2083 @ 0x0)
+Unable to communicate with the debug probe. Confirm debug probe configuration and connections, reset the debug probe, and retry the operation.
+(Emulation package 9.7.0.00213)
+
+org.mozilla.javascript.WrappedException: Wrapped com.ti.ccstudio.scripting.environment.ScriptingException: Could not start server: DebugServer.1: IcePick_D: Error initializing emulator: (Error -2083 @ 0x0)
+Unable to communicate with the debug probe. Confirm debug probe configuration and connections, reset the debug probe, and retry the operation.
+(Emulation package 9.7.0.00213)
+
+ (program_evm.js#295)
+        at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1693)
+        at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:160)
+        at org.mozilla.javascript.NativeJavaMethod.call(NativeJavaMethod.java:204)
+        at org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:76)
+        at org.mozilla.javascript.gen.c1._c0(program_evm.js:295)
+        at org.mozilla.javascript.gen.c1.call(program_evm.js)
+        at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:340)
+        at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:2758)
+        at org.mozilla.javascript.gen.c1.call(program_evm.js)
+        at org.mozilla.javascript.gen.c1.exec(program_evm.js)
+        at org.mozilla.javascript.tools.shell.Main.evaluateScript(Main.java:503)
+        at org.mozilla.javascript.tools.shell.Main.processFileSecure(Main.java:425)
+        at org.mozilla.javascript.tools.shell.Main.processFile(Main.java:391)
+        at org.mozilla.javascript.tools.shell.Main.processSource(Main.java:382)
+        at org.mozilla.javascript.tools.shell.Main.processFiles(Main.java:179)
+        at org.mozilla.javascript.tools.shell.Main$IProxy.run(Main.java:100)
+        at org.mozilla.javascript.Context.call(Context.java:528)
+        at org.mozilla.javascript.ContextFactory.call(ContextFactory.java:450)
+        at org.mozilla.javascript.tools.shell.Main.exec(Main.java:162)
+        at com.ti.ccstudio.apps.internal.scripting.RunScript$1.run(RunScript.java:89)
+Caused by: com.ti.ccstudio.scripting.environment.ScriptingException: Could not start server: DebugServer.1: IcePick_D: Error initializing emulator: (Error -2083 @ 0x0)
+Unable to communicate with the debug probe. Confirm debug probe configuration and connections, reset the debug probe, and retry the operation.
+(Emulation package 9.7.0.00213)
+
+
+        at com.ti.debug.engine.scripting.DebugServer$SessionFactory.<init>(DebugServer.java:158)
+        at com.ti.debug.engine.scripting.DebugServer.openSession(DebugServer.java:1257)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+        at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:145)
+        ... 18 more
+
+## Run again, but with RHINO debugger option ('-dss.debug')... Nice! launches a scripting IDE debugger!
+C:\Projects\TI_DSP_EVM\TMDSEVM6678_DVD\program_evm>%DSS_SCRIPT_DIR%\dss.bat -dss.debug program_evm.js TMDXEVM6678Le-le
