@@ -1,0 +1,99 @@
+[C66xx_0] Version #: 0x02010008; string HYPLNK LLD Revision: 02.01.00.08:Apr 20 2020:18:12:34
+About to do system setup (PLL, PSC, and DDR)
+Constructed SERDES configs: PLL=0x00000228; RX=0x0046c495; TX=0x000ccf95
+system setup worked
+About to set up HyperLink Peripheral
+============================Hyperlink Testing Port 0 
+========================================== begin registers before initialization ===========
+Revision register contents:
+  Raw    = 0x4e901900
+Status register contents:
+  Raw        = 0x00000004
+Link status register contents:
+  Raw       = 0x00000000
+Control register contents:
+  Raw             = 0x00000000
+Control register contents:
+  Raw        = 0x00000000
+============== end registers before initialization ===========
+SERDES_STS (32 bits) contents: 0x00000001; lock = 1
+============== begin registers after initialization ===========
+Status register contents:
+  Raw        = 0x04402005
+Link status register contents:
+  Raw       = 0xccf00cff
+Control register contents:
+  Raw             = 0x00006206
+============== end registers after initialization ===========
+Waiting 5 seconds to check link stability
+Analyzing the connection for each lane
+Precursors 1 Analysis: 1,0,1,0,1,0,0,1
+Postcursors: 19 Analysis: 1,0,1,0,1,0,0,1
+Link seems stable
+About to try to read remote registers
+============== begin REMOTE registers after initialization ===========
+Status register contents:
+  Raw        = 0x0440080f
+Link status register contents:
+  Raw       = 0xfdf0bdf0
+Control register contents:
+  Raw             = 0x00006202
+============== end REMOTE registers after initialization ===========
+Peripheral setup worked
+About to read/write once
+Single write test passed
+About to pass 65536 tokens; iteration = 0
+Link Speed is 4 * 3.125 Gbps
+
+=== HyperLink results using CPU transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 6246 Mcycles
+Approximately 95320 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using DMA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 275 Mcycles
+Approximately 4202 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using INFRA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 2987 Mcycles
+Approximately 45580 cycles per round-trip
+=== this is not an optimized example ===
+Checking statistics
+About to pass 65536 tokens; iteration = 1
+Link Speed is 4 * 3.125 Gbps
+
+=== HyperLink results using CPU transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 6246 Mcycles
+Approximately 95320 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using DMA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 275 Mcycles
+Approximately 4202 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using INFRA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 2987 Mcycles
+Approximately 45580 cycles per round-trip
+=== this is not an optimized example ===
+Checking statistics
+About to pass 65536 tokens; iteration = 2
+Link Speed is 4 * 3.125 Gbps
+
+=== HyperLink results using CPU transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 6246 Mcycles
+Approximately 95320 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using DMA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 275 Mcycles
+Approximately 4202 cycles per round-trip
+=== this is not an optimized example ===
+
+=== HyperLink results using INFRA transfers ===
+Passed 65536 tokens round trip (read+write through hyplnk) in 2987 Mcycles
+Approximately 45580 cycles per round-trip
+=== this is not an optimized example ===
+Checking statistics
+Hyperlink LLD Example Completed Successfully!
