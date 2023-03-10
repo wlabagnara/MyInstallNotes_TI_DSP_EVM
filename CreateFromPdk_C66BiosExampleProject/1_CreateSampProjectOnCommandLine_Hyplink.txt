@@ -1,0 +1,63 @@
+
+Microsoft Windows [Version 10.0.22621.1265]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\ti\pdk_c667x_2_0_16\packages>pdksetupenv.bat
+***************************************************
+Environment Configuration:
+***************************************************
+    SDK_INSTALL_PATH        : C:/ti
+    PDK_INSTALL_PATH        : C:/ti/pdk_c667x_2_0_16/packages
+    GMAKE_INSTALL_PATH      : C:/ti/xdctools_3_55_02_22_core
+    PDK_SOC                 : c667x
+    PDK_VERSION             : 2_0_16
+    RULES_MAKE              : C:/ti/pdk_c667x_2_0_16/packages/ti/build/Rules.make
+***************************************************
+
+=========================================================================
+
+C:\ti\pdk_c667x_2_0_16\packages>pdkProjectCreate.bat C6678 all little hyplnk all dsp "C:\ti\pdk_c667x_2_0_16\packages"
+=========================================================================
+Configuration:
+   SOC             :   C6678
+   BOARD           :   all
+   ENDIAN          :   little
+   MODULE          :   hyplnk
+   PROJECT_TYPE    :   all
+   PROCESSOR       :   dsp
+   PDK_SHORT_NAME  :   "C:\ti\pdk_c667x_2_0_16\packages"
+=========================================================================
+Checking Configuration...
+Complete
+=========================================================================
+   PDK_PARTNO         : C6678L
+   PDK_ECLIPSE_ID     : com.ti.pdk.c667x
+   RTSC_PLATFORM_NAME : ti.platforms.evm6678
+   RTSC_TARGET        : ti.targets.elf.C66
+   CCS_DEVICE         : "com.ti.ccstudio.deviceModel.C6000.GenericC64xPlusDevice"
+*****************************************************************************
+Detecting all projects in PDK and importing them in the workspace "C:\ti\pdk_c667x_2_0_16\packages"\MyExampleProjects
+Detected Test Project: hyplnk_evmc6678_C66BiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'hyplnk_evmc6678_C66BiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Detected Test Project: hyplnk_evmc6678_C66DevLibBiosExampleProject
+
+--------------------------------------------------------------------------------
+Creating project 'hyplnk_evmc6678_C66DevLibBiosExampleProject'...
+
+    NOTE: Compiler version '8.3.2' is not currently installed! - defaulting to '8.3.5'.
+
+Done!
+Copying macros.ini
+        1 file(s) copied.
+Project generation complete
+*****************************************************************************
+
+C:\ti\pdk_c667x_2_0_16\packages>
