@@ -1,0 +1,5 @@
+file_name  = nor.bin
+start_addr = 0
+
+
+

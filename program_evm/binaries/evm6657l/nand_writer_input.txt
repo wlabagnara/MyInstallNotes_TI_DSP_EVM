@@ -1,0 +1,5 @@
+file_name  = nand.bin
+start_addr = 131072
+
+
+

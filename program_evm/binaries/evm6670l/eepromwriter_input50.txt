@@ -1,0 +1,8 @@
+file_name  = eeprom50.bin
+bus_addr   = 80
+start_addr = 0
+swap_data  = 0
+
+
+
+
